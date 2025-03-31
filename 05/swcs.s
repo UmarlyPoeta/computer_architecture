@@ -60,10 +60,11 @@ sub	$8 , %rsp
 cmp $4, %edi
 je dalej
 mov $(-1), %eax
+add $8, %rsp
 ret
 
 dalej:
-sub $8, %rsp
+
 # ...
 
 convert_argv:
