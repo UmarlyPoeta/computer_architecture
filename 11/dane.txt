@@ -1,0 +1,77 @@
+4
+blocked     = 10.880556 s
+GFLOPS      = 1.470513
+
+naive       = 44.517004 s
+GFLOPS      = 0.359413
+
+blocked     = 10.754934 s
+GFLOPS      = 1.487689
+
+naive       = 43.825244 s
+GFLOPS      = 0.365086
+
+8
+blocked     = 6.278249 s
+GFLOPS      = 2.548481
+
+naive       = 43.903541 s
+GFLOPS      = 0.364435
+
+blocked     = 7.039183 s
+GFLOPS      = 2.272991
+
+naive       = 43.935190 s
+GFLOPS      = 0.364173
+
+10
+blocked     = 6.744647 s
+GFLOPS      = 2.372252
+
+naive       = 44.208655 s
+GFLOPS      = 0.361920
+
+blocked     = 6.737798 s
+GFLOPS      = 2.374663
+
+naive       = 44.206888 s
+GFLOPS      = 0.361935
+
+16
+blocked     = 7.635390 s
+GFLOPS      = 2.095505
+
+naive       = 43.744534 s
+GFLOPS      = 0.365760
+
+blocked     = 7.662752 s
+GFLOPS      = 2.088023
+
+naive       = 44.158760 s
+GFLOPS      = 0.362329
+
+20
+blocked     = 6.463122 s
+GFLOPS      = 2.475584
+
+naive       = 44.724879 s
+GFLOPS      = 0.357743
+
+blocked     = 6.523805 s
+GFLOPS      = 2.452556
+
+naive       = 42.156942 s
+GFLOPS      = 0.379534
+
+25
+blocked     = 7.391726 s
+GFLOPS      = 2.164582
+
+naive       = 44.664101 s
+GFLOPS      = 0.358230
+
+blocked     = 7.350372 s
+GFLOPS      = 2.176761
+
+2naive       = 45.073401 s
+GFLOPS      = 0.354977
