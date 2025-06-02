@@ -1,0 +1,35 @@
+4x1
+    sse
+    GFLOPS      = 1.360212
+    GFLOPS      = 1.309577
+    avx
+    GFLOPS      = 1.580112
+    GFLOPS      = 1.603852
+4x4
+    sse
+    GFLOPS      = 4.742248
+    GFLOPS      = 4.630840
+    avx
+    GFLOPS      = 5.143705
+    GFLOPS      = 5.214986
+8x1
+    sse
+    GFLOPS      = 2.232226
+    GFLOPS      = 2.230595
+    avx
+    GFLOPS      = 2.508850
+    GFLOPS      = 2.326790
+8x8
+    sse
+    GFLOPS      = 0.0
+    GFLOPS      = 0.0
+    avx
+    GFLOPS      = 8.259544
+    GFLOPS      = 7.236875
+16x1
+    sse
+    GFLOPS      = 3.185007
+    GFLOPS      = 3.639931
+    avx
+    GFLOPS      = 4.195901
+    GFLOPS      = 3.956599
