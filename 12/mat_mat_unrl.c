@@ -60,7 +60,8 @@ for (i=0;i<n;++i)			//wypelnij a i b jakimis wartosciami poczatkowymi
 
 
 init_time();
-dgemm_sse_8x1(SIZE,a,b,c);
+r2c(SIZE, a, at);
+dgemm_sse_2x1(SIZE,at,b,c);
 read_time(time_tabl);
 
 printf("ver. 1      = %lf s\n",time_tabl[1]);
@@ -357,7 +358,7 @@ for(i=0;i<n;i+=16)
 void dgemm_sse_2x1 (int n, double* A, double* B, double* C)
 {
 register int i,j,k;
-__m128d Cij;
+__m128d Cij, a;
 
 
 for(i=0;i<n;i+=2)
@@ -365,8 +366,13 @@ for(i=0;i<n;i+=2)
     {
 	Cij = _mm_load_pd(C+i+j*n);
 	for(k=0;k<n;k++)
-		Cij = _mm_add_pd(Cij , _mm_mul_pd( _mm_load_pd(A+i+k*n) , _mm_load1_pd(B+k+j*n) ) );
+	{
+		a = _mm_load_sd(A+k+i*n);
+		a = _mm_loadh_pd(a, A+k+ (i+1) * n);
 
+		Cij = _mm_add_pd(Cij , _mm_mul_pd( a, _mm_load1_pd(B+k+j*n) ) );
+	}
+		
 	_mm_store_pd(C+i+j*n, Cij);
     }
 }
