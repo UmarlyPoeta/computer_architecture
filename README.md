@@ -10,7 +10,7 @@ Course materials can be found at: http://galaxy.agh.edu.pl/~amrozek/ak.html
 
 The repository is organized into numbered directories, each corresponding to a specific laboratory exercise:
 
-### Assembly Language Labs (01-10)
+### Assembly Language Labs (01-07, 09-10)
 
 - **01/** - Introduction to Assembly
   - Basic program structure
@@ -40,6 +40,7 @@ The repository is organized into numbered directories, each corresponding to a s
   - Computing Pi
   - FPU operations
   - Performance measurements (GFLOPS)
+  - Includes `eval_time.c` for timing measurements
 
 ### Performance Optimization Labs (11-12)
 
@@ -90,20 +91,25 @@ ld -o lab1 lab1.o
 ./lab1
 ```
 
-### C Programs (Labs 11-12)
+### C Programs (Labs 10-12)
 
-To compile C programs:
+Labs 10-12 include C code for performance measurement and optimization:
 
 ```bash
-# Navigate to the lab directory
+# Navigate to the lab directory (example: lab 11)
 cd 11
 
-# Compile with optimization
+# First, compile the timing utility (if needed, from lab 10)
+gcc -c -O2 ../10/eval_time.c -o eval_time.o
+
+# Compile the main program with optimization
 gcc -O2 -o mat_mat mat_mat.c eval_time.o -lm
 
 # Run the program
 ./mat_mat
 ```
+
+**Note**: The `eval_time.c` file is located in lab 10 and provides timing utilities used across multiple labs.
 
 ## 📊 Performance Analysis
 
